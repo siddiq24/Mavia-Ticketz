@@ -1,0 +1,232 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+main {
+    padding: 0 5%;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+/* Hero Background Image */
+.hero-background {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 462px;
+    object-fit: cover;
+    object-position: center;
+    filter: brightness(0.5);
+    z-index: -1;
+}
+
+/* Hero Section */
+.hero-section {
+    height: 462px;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.hero-content h1 {
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.hero-content h2 {
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+/* Search and Filter Section */
+.search-filter-section {
+    padding: 3rem 0 0;
+}
+
+.search-filter-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    .search-filter-container {
+        flex-direction: row;
+        align-items: flex-end;
+    }
+}
+
+.search-box {
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .search-box {
+        width: 340px;
+    }
+}
+
+.search-box p {
+    margin-bottom: 0.75rem;
+    color: #4E4B66;
+    font-weight: 500;
+}
+
+.search-input-container {
+    height: 64px;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    gap: 1.125rem;
+    align-items: center;
+    padding: 1.25rem;
+    border-radius: 6px;
+    border: 1px solid #A0A3BD;
+}
+
+.search-input-container input {
+    border: none;
+    width: 100%;
+    font-size: 1rem;
+}
+
+.search-input-container input::placeholder {
+    color: #A0A3BD;
+}
+
+.filter-container {
+    flex: 1;
+    width: 100%;
+}
+
+.filter-container p {
+    color: #4E4B66;
+    font-weight: 500;
+    margin-bottom: 0.75rem;
+}
+
+.filter-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.filter-buttons a {
+    padding: 0.625rem 1.5rem;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #AD4ED8;
+    background-color: #F9F9F9;
+    font-size: 0.875rem;
+    white-space: nowrap;
+}
+
+.filter-buttons a:hover,
+.filter-buttons a.active {
+    background-color: #AD4ED8;
+    color: white;
+}
+
+/* Movies Section */
+.movies-section {
+    padding: 3rem 0;
+}
+
+.movies-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+@media (min-width: 1024px) {
+    .movies-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .movie-card img{
+        filter: brightness(0.5);
+    }
+}
+
+.movie-card {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.movie-card:hover {
+    transform: translateY(-5px);
+    img{filter: brightness(1);}
+}
+
+.movie-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 0.75rem;
+}
+
+.movie-title {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #14142B;
+}
+
+.movie-categories {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.movie-categories a {
+    font-size: 0.75rem;
+    color: #AD4ED8;
+    background-color: #F9F9F9;
+    padding: 0.25rem 0.75rem;
+    border-radius: 4px;
+    text-decoration: none;
+}
+
+/* Pagination */
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 1.25rem;
+    margin-top: 3rem;
+}
+
+.pagination div {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: #F9FAFB;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-weight: 600;
+    color: #4E4B66;
+    transition: all 0.3s ease;
+}
+
+.pagination div.active,
+.pagination div:hover {
+    background-color: #AD4ED8;
+    color: white;
+}
+
+.pagination div:last-child {
+    background-color: transparent;
+    border: 1px solid #AD4ED8;
+    color: #AD4ED8;
+}
+
+.pagination div:last-child:hover {
+    background-color: #AD4ED8;
+    color: white;
+}
