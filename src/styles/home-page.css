@@ -1,0 +1,406 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+/* Base Styles */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: "Mulish", sans-serif;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+main {
+    padding: 20px;
+}
+
+/* Hero Section */
+#hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    margin: 30px 0;
+    height: fit-content;
+}
+
+.hero-content {
+    order: 1;
+}
+
+.hero-content h1 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #1d4ed8;
+}
+
+.hero-content h2 {
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 1.3;
+    margin: 10px 0;
+}
+
+.hero-content p {
+    font-size: 16px;
+    color: #a0a3bd;
+}
+
+.hero-images {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    order: 2;
+}
+
+.images-left,
+.images-right {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 45%;
+    max-width: 218px;
+}
+
+.images-left {
+    .image-top {
+        border-radius: 20px 20px 0 0;
+        height: 30%;
+    }
+    .image-bottom{
+        border-radius: 0 0 20px 20px;
+        height: 40%;
+    }
+}
+
+.images-right {
+    .image-top {
+        border-radius: 20px 20px 0 0;
+        height: 40%;
+    }
+    .image-bottom{
+        border-radius: 0 0 20px 20px;
+        height: 30%;
+    }
+}
+
+.hero-images img {
+    width: 100%;
+    object-fit: cover;
+    object-position: top;
+}
+
+/* Why Choose Us Section */
+#why-choose-us {
+    margin: 50px 0;
+}
+
+.section-subtitle {
+    font-weight: 700;
+    font-size: 18px;
+    color: #1d4ed8;
+    margin-bottom: 10px;
+}
+
+.section-title {
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 1.3;
+    margin-bottom: 30px;
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+
+
+    .benefit-card {
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+        border-radius: 10px;
+        background-color: white;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .benefit-icon {
+        width: 54px;
+        height: 54px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(29, 78, 216, 0.1);
+        margin-bottom: 20px;
+    }
+
+    .benefit-card h4 {
+        font-size: 18px;
+        font-weight: 700;
+        margin-bottom: 15px;
+    }
+
+    .benefit-card p {
+        font-size: 16px;
+        line-height: 1.6;
+        color: #a0a3bd;
+    }
+}
+
+/* Movies Section */
+#movies,
+#upcoming {
+    margin: 50px 0;
+}
+
+.movies-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.movie-card {
+    margin-bottom: 30px;
+}
+
+.movie-card img {
+    width: 100%;
+    border-radius: 6px;
+    margin-bottom: 15px;
+}
+
+.movie-card h4 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.movie-categories {
+    display: flex;
+    gap: 10px;
+}
+
+.movie-categories span {
+    padding: 5px 15px;
+    border-radius: 20px;
+    background-color: rgba(160, 163, 189, 0.1);
+    color: #a0a3bd;
+    font-size: 14px;
+}
+
+.view-all {
+    display: inline-block;
+    margin-top: 20px;
+    font-weight: 700;
+    color: #1d4ed8;
+    text-decoration: none;
+}
+
+.view-all svg {
+    margin-left: 5px;
+    vertical-align: middle;
+}
+
+/* Upcoming Section */
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.slider-controls {
+    display: flex;
+    gap: 10px;
+}
+
+.slider-controls button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #1d4ed8;
+    border: none;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+/* Newsletter Section */
+#newsletter {
+    background-color: #2563eb;
+    padding: 40px 20px;
+    border-radius: 30px;
+    margin: 50px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.newsletter-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
+
+#newsletter h2 {
+    color: white;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.newsletter-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.newsletter-form input {
+    height: 50px;
+    padding: 0 20px;
+    border: 1px solid white;
+    border-radius: 6px;
+    background: transparent;
+    color: white;
+}
+
+.newsletter-form input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.newsletter-form button {
+    height: 50px;
+    background-color: white;
+    border: none;
+    border-radius: 6px;
+    color: #1d4ed8;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.newsletter-circle {
+    position: absolute;
+    right: -100px;
+    bottom: -100px;
+    width: 229px;
+    height: 229px;
+    border-radius: 50%;
+    border: 5px solid white;
+    opacity: 0.2;
+}
+
+
+/* Responsive Styles */
+@media (min-width: 768px) {
+    main {
+        padding: 0 50px;
+    }
+
+    /* Hero Section */
+    #hero {
+        flex-direction: row;
+        align-items: center;
+        margin: 50px 0;
+    }
+
+    .hero-content {
+        flex: 1;
+        order: 1;
+    }
+
+    .hero-images {
+        flex: 1;
+        order: 2;
+        justify-content: center;
+        padding-top: 20%;
+    }
+
+    .hero-content h2 {
+        font-size: 40px;
+    }
+
+    /* Why Choose Us */
+    .benefits-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* Movies Grid */
+    .movies-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    /* Footer */
+    .footer-content {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .sponsor-logos {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .benefit-card {
+        align-items: start;
+    }
+}
+
+@media (min-width: 1024px) {
+    main {
+        padding: 0 130px;
+    }
+
+    .hero-content h2 {
+        font-size: 48px;
+    }
+
+    .section-title {
+        font-size: 32px;
+    }
+}
+
+@media (max-width: 767px) {
+    .hero-images {
+        flex-direction: row;
+    }
+
+    .images-left,
+    .images-right {
+        width: 48%;
+    }
+
+    .benefits-grid {
+        display: block;
+    }
+
+
+}
+
+/* Animation for mobile menu */
+@keyframes slideIn {
+    from {
+        transform: translateY(-100%);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideOut {
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(-100%);
+    }
+}
