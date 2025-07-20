@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mavia Ticketz</title>
+    <link rel="stylesheet" href="style.css" />
+
+</head>
+
+<body>
+    <header>
+        <img src="/src/assets/logo.png" alt="">
+    </header>
+    <section class="container">
+        <div class="form-wrapper">
+
+            <div class="steps">
+                <section class="active">
+                    <div class="stepNumber ">1</div>
+                    <div class="step">Fill Form</div>
+                </section>
+                <div class="line"></div>
+                <section>
+                    <div class="stepNumber">2</div>
+                    <div class="step">Activate</div>
+                </section>
+                <div class="line"></div>
+                <section>
+                    <div class="stepNumber">3</div>
+                    <div class="step">Done</div>
+                </section>
+            </div>
+
+            <form>
+                <label for="email">Email</label>
+                <div class="email-input">
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required />
+                </div>
+
+                <label for="password">Password</label>
+                <div class="password-input">
+                    <input type="password" id="password" name="password" placeholder="Enter your password" required />
+                    <img class="eye-icon" src="https://img.icons8.com/?size=100&id=7tg2iJatDNzj&format=png&color=838383"
+                        alt="look password">
+                </div>
+
+                <div class="checkbox">
+                    <input type="checkbox" id="terms" />
+                    <label for="terms">I agree to terms & conditions</label>
+                </div>
+
+                <button type="submit" class="submit-btn">Join For Free Now</button>
+            </form>
+
+            <p class="login-link">
+                Alredy have an account? <a href="/src/pages/login.html">Log in</a>
+            </p>
+
+            <div class="line-or">
+                <hr>
+                <div class="text-or">or</div>
+            </div>
+
+            <div class="social-buttons">
+                <button class="google">
+                    <a href="https://google.com">
+                        <img src="https://img.icons8.com/?size=100&id=17949&format=png&color=000000" alt="google icon">
+                        <span>Google</span>
+                    </a>
+                </button>
+                <button class="facebook">
+                    <a href="https://facebook.com">
+                        <img src="https://img.icons8.com/?size=100&id=118497&format=png&color=000000"
+                            alt="facebook icon">
+                        <span>Facebook</span>
+                    </a>
+                </button>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
