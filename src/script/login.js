@@ -14,11 +14,11 @@ if (loggedInUser) {
     window.location.href = "/src/pages/home-page.html";
 }
 
-// Ambil data user dari localStorage
-let users = JSON.parse(localStorage.getItem("users")) || [];
-
 regForm.addEventListener("submit", (e) => {
     e.preventDefault();
+
+    // Ambil data user dari localStorage
+    let users = JSON.parse(localStorage.getItem("users")) || [];
 
     // Validasi input
     msgE.textContent = (email.value.length === 0) ? "⚠️email tidak boleh kosong" :
@@ -28,25 +28,14 @@ regForm.addEventListener("submit", (e) => {
             (!regPw.test(pass.value)) ? "⚠️password harus mengandung huruf kecil, huruf kapital, dan simbol" : "";
 
     if (msgE.textContent === "" && msgP.textContent === "") {
-        const emailExist = users.some(user => user.email === email.value);
+        const user = users.find(user => user.email === email.value && user.password === pass.value);
 
-        if (emailExist) {
-            alert("🚫 Email sudah terdaftar. Gunakan email lain.");
-        } else {
-            const newUser = {
-                email: email.value,
-                password: pass.value
-            };
-            users.push(newUser);
-            localStorage.setItem("users", JSON.stringify(users));
-            
-            // Simpan data user yang baru registrasi sebagai logged in
-            localStorage.setItem("loggedInUser", JSON.stringify(newUser));
-
-            alert("✅ Registrasi berhasil!");
-            email.value = "";
-            pass.value = "";
+        if (user) {
+            // Simpan data user yang login
+            localStorage.setItem("loggedInUser", JSON.stringify(user));
             window.location.href = "/src/pages/home-page.html";
+        } else {
+            alert("Email atau password salah");
         }
     }
 });
