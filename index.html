@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mavia Ticketz</title>
     <link rel="stylesheet" href="style.css" />
+    <script src="/src/script/validateRegist.js" defer></script>
 
 </head>
 
@@ -36,18 +37,20 @@
             <form>
                 <label for="email">Email</label>
                 <div class="email-input">
-                    <input type="email" id="email" name="email" placeholder="Enter your email" required />
+                    <input type="email" id="email" name="email" placeholder="Enter your email"/>
                 </div>
+                <div class="alert email"></div>
 
                 <label for="password">Password</label>
                 <div class="password-input">
-                    <input type="password" id="password" name="password" placeholder="Enter your password" required />
+                    <input type="password" id="password" name="password" placeholder="Enter your password"/>
                     <img class="eye-icon" src="https://img.icons8.com/?size=100&id=7tg2iJatDNzj&format=png&color=838383"
                         alt="look password">
                 </div>
+                <div class="alert pass"></div>
 
                 <div class="checkbox">
-                    <input type="checkbox" id="terms" />
+                    <input type="checkbox" id="terms" required />
                     <label for="terms">I agree to terms & conditions</label>
                 </div>
 
