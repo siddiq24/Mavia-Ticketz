@@ -31,7 +31,15 @@ regForm.addEventListener("submit", (e) => {
         const emailExist = users.some(user => user.email === email.value);
 
         if (emailExist) {
-            alert("🚫 Email sudah terdaftar. Gunakan email lain.");
+            const user = users.find(user => user.email === email.value && user.password === pass.value);
+
+            if (user) {
+                // Simpan data user yang login
+                localStorage.setItem("loggedInUser", JSON.stringify(user));
+                window.location.href = "/src/pages/home-page.html";
+            } else {
+                alert("🚫 Email sudah terdaftar. Gunakan email lain.");
+            }
         } else {
             const newUser = {
                 email: email.value,
@@ -39,7 +47,7 @@ regForm.addEventListener("submit", (e) => {
             };
             users.push(newUser);
             localStorage.setItem("users", JSON.stringify(users));
-            
+
             // Simpan data user yang baru registrasi sebagai logged in
             localStorage.setItem("loggedInUser", JSON.stringify(newUser));
 
