@@ -207,25 +207,6 @@
     }
 
 
-
-    #STATE {
-        display: flex;
-        justify-content: center;
-        gap: 10px;
-        margin: 50px 0;
-
-        &>div {
-            text-align: center;
-
-            &:nth-of-type(2n) {
-                width: 50px;
-                height: 30px;
-                border-bottom: 1px dashed #A0A3BD;
-            }
-        }
-    }
-
-
     main#PROFILE {
         padding: 56px 70px;
         display: flex;
